@@ -10,9 +10,13 @@ SRC=main.go
 # Default target
 all: install
 
-# Build the binary
+# Build the binary using Docker
 build:
-	go build -o $(BINARY_NAME) $(SRC)
+	docker run --rm \
+		-v $(PWD):/workspace \
+		-w /workspace \
+		golang:1.25-alpine \
+		sh -c "go mod download && go build -o $(BINARY_NAME) $(SRC)"
 
 # Install the binary to the destination
 install: build
@@ -24,4 +28,3 @@ install: build
 clean:
 	rm -f $(BINARY_NAME)
 	rm -f $(INSTALL_DIR)/$(INSTALL_NAME)
-
