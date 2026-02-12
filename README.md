@@ -24,7 +24,7 @@ make
 Add this to your `~/.zshrc`:
 
 ```bash
-export GEMINI_API_KEY="your_api_key_here"
+export GEMINI_SHELL_API_KEY="your_api_key_here"
 
 # Wrapper
 function gemini-wizard() { ~/bin/gemini-shell-wizard-bin "$@"; }

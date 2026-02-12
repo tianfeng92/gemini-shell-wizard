@@ -27,9 +27,9 @@ var cacheFile = filepath.Join(os.Getenv("HOME"), ".gemini-env")
 
 func main() {
 	// 1. Setup API
-	apiKey := os.Getenv("GEMINI_API_KEY")
+	apiKey := os.Getenv("GEMINI_SHELL_API_KEY")
 	if apiKey == "" {
-		fmt.Fprintf(os.Stderr, "Error: GEMINI_API_KEY environment variable not set.\n")
+		fmt.Fprintf(os.Stderr, "Error: GEMINI_SHELL_API_KEY environment variable not set.\n")
 		os.Exit(1)
 	}
 
