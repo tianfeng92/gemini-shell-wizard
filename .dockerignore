@@ -1,0 +1,14 @@
+# Ignore build artifacts
+gemini-shell-wizard
+gemini-shell-wizard-bin
+
+# Ignore git
+.git
+.gitignore
+
+# Ignore documentation
+README.md
+LICENSE
+
+# Ignore environment cache
+.gemini-env
